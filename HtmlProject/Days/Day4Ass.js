@@ -52,6 +52,9 @@ inventory.push(createProduct("Mouse",25,50));
 inventory.push(createProduct("Keyboard",100,10));
 
 console.log(inventory[1]);
+quantity:[10,20,30,40]
+quantity:100
+
 
 inventory[0].price=1500;
 
@@ -86,5 +89,26 @@ const adminUser={
 if(adminUser.permissions.canEdit===true){
     console.log("Access Granted: Inventory updated.");
 }
+
+
+inventory[0].quantity=[10,20,30,40]
+let sum=0;
+for(let i=0; i<inventory[0].quantity.length; i++){
+    sum=sum+inventory[0].quantity[i];
+}
+
+//console.log(sum);
+
+inventory[0].quantity=sum;
+
+console.log(inventory);
+
+const totalPrice=()=>{
+    return inventory[0].price*sum;
+}
+console.log(totalPrice());
+
+
+
 
 
