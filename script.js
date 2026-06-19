@@ -1,3 +1,11 @@
+//import number1, { number } from "./script1.js";
+//import number1 from "./script1.js";
+import {res} from "./script1.js";
+console.log(res)
+//console.log(number)
+//number1()
+//console.log(number1(5,3));
+
 //const a = prompt("enter your number")
 //console.log(a)
 
@@ -80,7 +88,56 @@ let num=Number(prompt("Enter number1"));
 
 let res=(num>=18)?"Eligible for vote":"Not Eligible for vote";
 console.log(res);
-*/
+// */
+// const user ={
+//     name:"hari",
+//     age:56
+// }
+// const {name, age}=user
+// // console.log(name)
+// const add1 =()=>{
+//     console.log(3+4)
+// }
+// add1()
+// const add = (a,b)=>{
+//     return a+b
+// }
+// const calculate =async()=>{
+// const total = await add(3,4)
+// console.log(total)
+// }
+// calculate()
+// // console.log("this is data")
+// const ptag = document.querySelector("#inner")
+// console.log(ptag)
+// ptag.innerHTML="this is js"
+// ptag.style.color= "red"
+
+
+const text = document.querySelector("#inner")
+console.log(text);
+text.innerHTML= `${res}`
+text.style.color="blue";
+
+const subtract = (a, b) => {
+    return a - b;
+};
+
+const result = async () => {
+    let value = await subtract(5, 2);
+    console.log(value);
+};
+result();
+console.log("This is a code");
+
+
+
+
+
+
+
+
+
 
 
 

@@ -72,6 +72,7 @@ console.log(animalData.join("\n"));
 
 const reptileanimal = animal.filter(animal=>animal.type==="Reptile")
 console.log(reptileanimal);
+
 const number=[1,2,4,5,6]
 
 const addData = number.reduce((acc,num)=>acc+num)
