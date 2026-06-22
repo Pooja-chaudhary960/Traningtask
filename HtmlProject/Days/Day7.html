@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <!-- <p id=""></p> -->
+   <button onclick="mapFunction()">All</button>
+   <button onclick="filterFunction1()">Male</button>
+   <button onclick="filterFunction()">Female</button>
+   <p id="result"></p>
+   
+<!--<button onclick="myFunction()">Click</button>
+<p id="demo"></p>
+<script>
+   // const x = document.getElementById("btn");
+   // x.addEventListener("mouseover",myFunction)
+   // x.addEventListener("mouseout",next)
+
+
+   function myFunction(){
+      document.getElementById("demo").innerHTML="Thank you"
+   }
+   function next(){
+      document.getElementById("demo").innerHTML="Please over mouse"
+} 
+</script>-->
+<script>
+      Person=[
+         {
+            name:"Ram",
+            age:22,
+            Profession:"Manager",
+            gender:"Male"
+         },
+         {
+            name:"Hari",
+            age:23,
+            Profession:"Accountant",
+            gender:"Male"
+         },
+         {
+            name:"Sita",
+            age:21,
+            Profession:"HR",
+            gender:"Female"
+         },
+         {
+            name:"Rita",
+            age:23,
+            Profession:"Designer",
+            gender:"Female"
+         },
+      ]
+
+   const res=Person.map((items)=>`My name is ${items.name} and age is ${items.age} and Profession is ${items.Profession} and gender is ${items.gender}`)
+   //console.log(res.join("\n"));
+
+   const filtMale=Person.filter(Person=>Person.gender==="Male").map(items =>
+      `My name is ${items.name} and age is ${items.age} and Profession is ${items.Profession} and gender is ${items.gender}`
+   );
+   const filtFemale=Person.filter(Person=>Person.gender==="Female").map(items =>
+      `My name is ${items.name} and age is ${items.age} and Profession is ${items.Profession} and gender is ${items.gender}`
+   );
+   //console.log(filtMale);
+   //console.log(filtFemale);
+   const mapFunction= ()=>{
+   const ptag = document.getElementById("result")
+      ptag.innerHTML=res.join("<br>")
+   }
+   const filterFunction=()=>{
+      const ptag1 = document.getElementById("result")
+      ptag1.innerHTML=filtFemale.join("<br>")
+      
+   }
+   const filterFunction1=()=>{
+      const ptag2 = document.getElementById("result")
+      ptag2.innerHTML=filtMale.join("<br>")
+   }
+</script>
+</body>
+</html>
